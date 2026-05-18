@@ -1,0 +1,51 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-size: var(--fs-xxs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.info {
+  background: var(--indigo-50);
+  color: var(--indigo-700);
+}
+.live {
+  background: var(--brand-50);
+  color: var(--brand-700);
+}
+.warn {
+  background: var(--amber-50);
+  color: var(--amber-700);
+}
+.ok {
+  background: var(--emerald-100);
+  color: var(--emerald-800);
+}
+.rejected {
+  background: var(--rose-50);
+  color: var(--rose-700);
+}
+.muted {
+  background: var(--slate-100);
+  color: var(--slate-600);
+}
+.emergency {
+  background: var(--rose-600);
+  color: white;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+.resub {
+  background: var(--amber-500);
+  color: white;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.78; }
+}

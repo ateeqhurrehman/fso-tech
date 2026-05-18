@@ -1,0 +1,57 @@
+/* Sub-tab nav — quieter brand-themed pattern (underline + brand-700 text)
+   than the top-level nav-item-active treatment (solid brand-600 bg).
+   Secondary nav is visually subordinate to primary nav. */
+
+.nav {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-bottom: 1px solid var(--slate-200);
+  margin-bottom: 14px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 44px;
+  padding: 0 14px;
+  color: var(--slate-600);
+  font-weight: 500;
+  font-size: var(--fs-md);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.12s, border-color 0.12s;
+}
+
+.tab:hover {
+  color: var(--slate-900);
+}
+
+.active {
+  color: var(--brand-700);
+  font-weight: 600;
+  border-bottom-color: var(--brand-600);
+}
+
+.label { }
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--slate-600);
+  background: var(--slate-100);
+  border-radius: var(--radius-full);
+}
+
+.active .count {
+  color: var(--brand-700);
+  background: var(--brand-50);
+}

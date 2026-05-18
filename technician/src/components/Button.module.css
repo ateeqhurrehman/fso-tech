@@ -1,0 +1,83 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: background 0.12s, box-shadow 0.12s, transform 0.06s, border-color 0.12s;
+  white-space: nowrap;
+  min-width: 80px;
+  border: 1px solid transparent;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* sizes — `lg` and `xl` stay tap-target compliant (≥48px) */
+.md {
+  height: 36px;
+  padding: 0 14px;
+  font-size: var(--fs-sm);
+}
+.lg {
+  height: var(--touch);
+  padding: 0 18px;
+  font-size: var(--fs-md);
+}
+.xl {
+  height: 54px;
+  padding: 0 22px;
+  font-size: var(--fs-lg);
+}
+
+.full { width: 100%; }
+
+/* variants */
+.primary {
+  background: var(--mts-red);
+  color: white;
+}
+.primary:hover:not(:disabled) { background: var(--mts-red-hover); }
+.primary:active:not(:disabled) { background: var(--mts-red-pressed); }
+
+.secondary {
+  background: var(--bg-elev);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.secondary:hover:not(:disabled) {
+  background: var(--bg-elev-2);
+  border-color: var(--text-faint);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text);
+}
+.ghost:hover:not(:disabled) { background: var(--bg-elev-2); }
+
+.danger {
+  background: var(--rose-600);
+  color: white;
+}
+.danger:hover:not(:disabled) { background: var(--rose-700); }
+
+.success {
+  background: var(--emerald-600);
+  color: white;
+}
+.success:hover:not(:disabled) { background: var(--emerald-800); }

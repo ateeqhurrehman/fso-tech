@@ -1,0 +1,123 @@
+.customer {
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+}
+
+.modeStack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.modeChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xxs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.fully { background: var(--status-ok-bg); color: var(--status-ok); }
+.image { background: var(--status-info-bg); color: var(--status-info); }
+.rejected { background: var(--status-warn-bg); color: var(--status-warn); }
+
+.demoBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-elev-2);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  gap: 10px;
+}
+.demoBtns { display: flex; gap: 6px; }
+
+.notesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.noteField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.noteLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.bar {
+  position: sticky;
+  bottom: 0;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--mts-red);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: var(--shadow-2);
+  z-index: 20;
+}
+
+.hint {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.locked {
+  border-top-color: var(--status-ok);
+  background: var(--status-ok-bg);
+  color: var(--text);
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.lockedIcon { color: var(--status-ok); }
+
+.rejectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+.rejectForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.rejectForm span {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+@media (max-width: 760px) {
+  .notesGrid { grid-template-columns: 1fr; }
+  .bar { flex-direction: column; align-items: stretch; }
+}

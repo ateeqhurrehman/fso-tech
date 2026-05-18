@@ -1,0 +1,90 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  gap: 4px;
+  overflow-x: auto;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 96px;
+}
+
+.dotBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  color: var(--text);
+  padding: 3px 4px;
+  border-radius: var(--radius-sm);
+}
+.dotBtn:disabled { cursor: default; }
+.dotBtn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  display: grid;
+  place-items: center;
+  background: var(--slate-200);
+  color: var(--slate-500);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  flex-shrink: 0;
+}
+
+.label {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.connector {
+  flex: 1;
+  height: 1px;
+  background: var(--slate-200);
+  margin: 0 8px;
+  border-radius: 0;
+}
+
+.done .dot {
+  background: var(--emerald-600);
+  color: white;
+}
+.done .label {
+  color: var(--text);
+}
+
+.connectorDone {
+  background: var(--emerald-400);
+}
+
+.current .dot {
+  background: var(--mts-red);
+  color: white;
+  box-shadow: 0 0 0 4px rgba(200, 16, 46, 0.15);
+}
+.current .label {
+  color: var(--mts-red);
+  font-weight: 700;
+}
+
+.future .dot {
+  background: var(--bg-elev-2);
+  color: var(--text-faint);
+  border: 1px dashed var(--border-strong);
+}

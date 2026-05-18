@@ -1,0 +1,93 @@
+.slaAckRow {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.ackCheckbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--bg-elev);
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius);
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.ackCheckbox:hover {
+  border-color: var(--brand-600);
+}
+
+.ackCheckbox:disabled {
+  cursor: default;
+}
+
+.ackChecked {
+  background: var(--brand-50);
+  border-color: var(--brand-600);
+}
+
+.ackBox {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-xs);
+  border: 1.5px solid var(--slate-400);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.ackChecked .ackBox {
+  background: var(--brand-600);
+  border-color: var(--brand-600);
+}
+
+.ackChecked .ackBox svg {
+  color: white;
+}
+
+.ackLabel {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--slate-700);
+}
+
+.ackChecked .ackLabel {
+  color: var(--brand-700);
+}
+
+.bar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--mts-red);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 20;
+}
+
+.hint {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .bar { flex-direction: column; align-items: stretch; }
+  .actions { width: 100%; }
+}

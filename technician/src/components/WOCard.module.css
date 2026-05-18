@@ -1,0 +1,127 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  color: var(--text);
+  transition: box-shadow 0.12s, transform 0.06s, border-color 0.12s;
+}
+
+.card:hover {
+  border-color: var(--mts-red);
+  box-shadow: var(--shadow-2);
+}
+
+.card:active {
+  transform: translateY(1px);
+}
+
+.card:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+.number {
+  font-weight: 700;
+  font-size: var(--fs-xl);
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.customer {
+  color: var(--text-muted);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.flags {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 50%;
+}
+
+.flags > * {
+  padding: 4px 10px;
+  font-weight: 700;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+.metaRow svg { flex-shrink: 0; opacity: 0.7; }
+
+.rejection {
+  background: var(--status-rejected-bg);
+  color: var(--mts-red);
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-xs);
+  line-height: 1.35;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  border-top: 1px dashed var(--border);
+}
+
+.timing {
+  color: var(--text-faint);
+  font-size: var(--fs-xxs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.chev {
+  color: var(--text-faint);
+}
+
+@keyframes flashHighlight {
+  0% {
+    box-shadow: 0 0 0 3px var(--brand-200);
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.cardHighlight {
+  animation: flashHighlight 2s ease-out;
+}

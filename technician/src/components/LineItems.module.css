@@ -1,0 +1,166 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  color: var(--text);
+  min-height: 48px;
+}
+.header:hover { background: var(--bg-elev-2); }
+
+.wrench { color: var(--text-muted); flex-shrink: 0; }
+
+.headBody { flex: 1; min-width: 0; }
+
+.headTop {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xxs);
+  font-weight: 600;
+  color: var(--mts-red);
+  background: var(--mts-red-soft-strong);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  letter-spacing: 0.04em;
+}
+
+.desc {
+  font-weight: 500;
+  font-size: var(--fs-sm);
+}
+
+.headMeta {
+  margin-top: 2px;
+  display: flex;
+  gap: 10px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.axle {
+  background: var(--blue-50);
+  color: var(--blue-700);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-weight: 600;
+  font-size: var(--fs-xxs);
+  letter-spacing: 0.05em;
+}
+
+.tireFlag {
+  background: var(--slate-100);
+  border: 1px solid var(--slate-200);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: var(--fs-xxs);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-elev-2);
+}
+
+.dispatcher {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--slate-50);
+  color: var(--text);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: var(--fs-xs);
+}
+
+.dispatcherIcon {
+  color: var(--slate-500);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.dispatcherBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.dispatcherLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--slate-600);
+  margin-bottom: 2px;
+}
+
+.dispatcherText {
+  font-style: italic;
+  color: var(--slate-700);
+  line-height: 1.4;
+}
+
+.tireGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.locked {
+  background: var(--bg-elev) !important;
+  color: var(--text-muted) !important;
+}
+
+.dispatcherNote {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elev-2);
+  border: 1px dashed var(--border-strong);
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
+
+@media (max-width: 760px) {
+  .tireGrid { grid-template-columns: 1fr 1fr; }
+}

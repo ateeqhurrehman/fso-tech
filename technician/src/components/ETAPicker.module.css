@@ -1,0 +1,133 @@
+.picker {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  margin-bottom: 10px;
+}
+
+.required {
+  font-size: var(--fs-xxs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--amber-50);
+  color: var(--amber-700);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.presets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.preset {
+  height: 60px;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  background: var(--bg-elev-2);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  transition: border-color 0.12s, background 0.12s;
+}
+.preset:hover {
+  border-color: var(--mts-red);
+}
+.presetNum {
+  font-weight: 700;
+  font-size: var(--fs-xl);
+}
+.presetUnit {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.active {
+  border-color: var(--mts-red);
+  background: var(--mts-red-soft-strong);
+  color: var(--mts-red);
+}
+.active .presetUnit {
+  color: var(--mts-red);
+}
+
+.customRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+.customRow input { flex: 1; }
+
+.preview {
+  margin-top: 10px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.locked {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.lockedHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--status-locked);
+  margin-bottom: 8px;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.lockedBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.lockedLabel {
+  font-size: var(--fs-xxs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  font-weight: 700;
+}
+
+.lockedValue {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 1px;
+}
+
+.lockedNote {
+  margin-top: 10px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  background: var(--bg-elev-2);
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+}
+
+@media (max-width: 760px) {
+  .presets { grid-template-columns: repeat(2, 1fr); }
+}

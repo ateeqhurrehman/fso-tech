@@ -1,0 +1,77 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 60px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  height: 32px;
+  padding: 0 8px 0 4px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+.back:hover { color: var(--mts-red); background: var(--bg-elev-2); }
+
+.notFound {
+  padding: 40px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Shared layout for detail screens */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+}
+
+.headTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.headTitle h1 {
+  font-size: var(--fs-xxl);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.headBadges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.actionBar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 20;
+}
+.actionBar > button {
+  flex: 1;
+}

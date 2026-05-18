@@ -1,0 +1,126 @@
+.customer {
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+}
+
+.timeStack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.stamp {
+  background: var(--bg-elev-2);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+}
+
+.stampLabel {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  font-weight: 700;
+}
+.stampValue {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+/* Tabbed Review — replaces the 15-section monolithic Review */
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  transition: background 0.12s, color 0.12s;
+  white-space: nowrap;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+.tab:hover {
+  background: var(--bg-elev-2);
+  color: var(--text);
+}
+.tabActive {
+  background: var(--mts-red);
+  color: white;
+}
+.tabActive:hover {
+  background: var(--mts-red-hover);
+  color: white;
+}
+.tab:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.tabBadge {
+  font-size: var(--fs-xxs);
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  background: var(--bg-elev-2);
+  color: var(--text-muted);
+}
+.tabActive .tabBadge { background: rgba(255, 255, 255, 0.22); color: white; }
+.tabBadge_ok { background: var(--status-ok-bg); color: var(--status-ok); }
+.tabBadge_missing { background: var(--status-rejected-bg); color: var(--mts-red); }
+.tabActive .tabBadge_ok,
+.tabActive .tabBadge_missing { background: rgba(255, 255, 255, 0.22); color: white; }
+
+.tabBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar {
+  position: sticky;
+  bottom: 0;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--mts-red);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: var(--shadow-2);
+  z-index: 20;
+}
+
+.hint {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .bar { flex-direction: column; align-items: stretch; }
+  .btns { width: 100%; }
+}

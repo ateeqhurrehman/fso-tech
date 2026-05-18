@@ -1,0 +1,216 @@
+.driverSafe {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-elev);
+  border: 2px solid var(--mts-red);
+  box-shadow: var(--shadow-2);
+}
+
+.badge {
+  align-self: center;
+  background: var(--mts-red);
+  color: white;
+  font-weight: 700;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+}
+
+.locationCard {
+  background: var(--bg-elev-2);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.locLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mts-red);
+}
+
+.locValue {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.equipmentRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.breakdownNotes {
+  background: var(--amber-50, #fffbeb);
+  border: 1px solid var(--amber-200, #fde68a);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.breakdownNotesLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--amber-700, #b45309);
+}
+
+.breakdownNotesBody {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.equipmentCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  color: var(--text-muted);
+}
+
+.eqLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.eqValue {
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  color: var(--text);
+}
+
+.callDriver {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--mts-red);
+  color: white;
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  box-shadow: var(--shadow-2);
+  /* Display-only — FSO does not engage in tap-to-dial; we just surface the
+     driver's name and number for the technician to reference. */
+}
+
+.callBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.callLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+.callValue {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.countdown {
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.countLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.countValue {
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.countSub {
+  margin-top: 4px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.late .countValue { color: var(--mts-red); }
+.late {
+  background: var(--status-rejected-bg);
+  border-color: var(--mts-red);
+}
+
+.slaRow {
+  display: flex;
+  justify-content: center;
+}
+
+.arrivePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-elev-2);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.arrLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.arrInput {
+  font-size: 20px;
+  font-weight: 700;
+  height: 48px;
+}
+
+.arrRow {
+  display: flex;
+  gap: 8px;
+}
+
+.driverNote {
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
+  text-align: center;
+  font-style: italic;
+}

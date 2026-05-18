@@ -1,0 +1,110 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  border: 1px solid;
+}
+
+.chip .elapsed { font-weight: 700; }
+
+.dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+.green {
+  background: var(--status-ok-bg);
+  color: var(--status-ok);
+  border-color: var(--status-ok);
+}
+
+.amber {
+  background: var(--status-warn-bg);
+  color: var(--status-warn);
+  border-color: var(--status-warn-strong);
+}
+
+.red {
+  background: var(--status-rejected-bg);
+  color: var(--rose-600);
+  border-color: var(--rose-600);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.block {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: 1px solid;
+}
+
+.block.green { background: var(--status-ok-bg); border-color: var(--status-ok); color: var(--text); }
+.block.amber { background: var(--status-warn-bg); border-color: var(--status-warn-strong); color: var(--text); }
+.block.red { background: var(--status-rejected-bg); border-color: var(--rose-600); color: var(--text); }
+
+.blockHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.green .blockHead { color: var(--status-ok); }
+.amber .blockHead { color: var(--status-warn); }
+.red .blockHead { color: var(--rose-600); }
+
+.blockRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.blockLabel {
+  font-size: var(--fs-xxs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.blockValue {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.blockRight { text-align: right; }
+
+.bar {
+  height: 4px;
+  background: var(--bg-elev);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: currentColor;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.green .barFill { background: var(--emerald-600); }
+.amber .barFill { background: var(--amber-600); }
+.red .barFill { background: var(--rose-600); }
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.3); }
+  50% { box-shadow: 0 0 0 4px rgba(225, 29, 72, 0); }
+}

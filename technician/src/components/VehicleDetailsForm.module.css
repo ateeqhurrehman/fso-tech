@@ -1,0 +1,51 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.readonly {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 7px 10px;
+  background: var(--bg-elev-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.rowLabel {
+  font-size: var(--fs-xxs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.rowValue {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 760px) {
+  .form, .readonly { grid-template-columns: 1fr; }
+}

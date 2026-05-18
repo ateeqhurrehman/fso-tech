@@ -1,0 +1,219 @@
+/* MTS Field Service — design tokens (Phase B unification baseline)
+   Canonical source: dispatcher/src/ (React + Tailwind).
+   Brand anchored at #C8102E (override of the accidental Tailwind-red default).
+   See FSO/DESIGN_TOKENS.md for the full token contract. */
+
+:root {
+  /* ============================================================
+     Brand palette — anchored at #C8102E (brand-600).
+     `--mts-red*` retained as semantic aliases; `--brand-*` are
+     the dispatcher-canonical names.
+     ============================================================ */
+  --brand-50:  #fdebee;
+  --brand-100: #fbd0d7;
+  --brand-200: #f4a5b1;
+  --brand-300: #ea7283;
+  --brand-400: #d8425a;
+  --brand-500: #cf1f3a;
+  --brand-600: #C8102E;
+  --brand-700: #a40d24;
+  --brand-800: #82091c;
+  --brand-900: #5e0613;
+
+  --mts-red:           var(--brand-600);
+  --mts-red-hover:     var(--brand-700);
+  --mts-red-pressed:   var(--brand-800);
+  --mts-red-soft:        rgba(200, 16, 46, 0.10);
+  --mts-red-soft-strong: rgba(200, 16, 46, 0.18);
+
+  /* ============================================================
+     Slate (neutrals) — dispatcher canonical
+     ============================================================ */
+  --slate-50:  #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+
+  /* ============================================================
+     Emerald (success)
+     ============================================================ */
+  --emerald-50:  #f0fdf4;
+  --emerald-100: #dcfce7;
+  --emerald-200: #bbf7d0;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #16a34a;
+  --emerald-700: #15803d;
+  --emerald-800: #166534;
+
+  /* ============================================================
+     Amber (warning / draft / checkpoint)
+     ============================================================ */
+  --amber-50:  #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-900: #78350f;
+
+  /* ============================================================
+     Red — defined but UNREFERENCED by technician modules.
+     Retained for potential dispatcher Phase C alignment (Cancelled
+     badge, etc.). Technician consolidates all non-brand red to rose-*.
+     ============================================================ */
+  --red-50:  #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-400: #fb7185;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+
+  /* ============================================================
+     Rose — canonical destructive / rejection family in technician
+     (consolidates --status-emergency and --status-rejected).
+     ============================================================ */
+  --rose-50:  #fff1f2;
+  --rose-100: #ffe4e6;
+  --rose-200: #fecdd3;
+  --rose-600: #e11d48;
+  --rose-700: #be123c;
+
+  /* ============================================================
+     Sky / Cyan / Blue / Indigo / Violet — status badge palette
+     (referenced by SLATimer, StatusBadge, RejectionBanner etc.)
+     ============================================================ */
+  --sky-50:  #f0f9ff;
+  --sky-200: #bae6fd;
+  --sky-700: #0369a1;
+
+  --cyan-50:  #ecfeff;
+  --cyan-100: #cffafe;
+  --cyan-200: #a5f3fc;
+  --cyan-700: #0891b2;
+
+  --blue-50:  #eff6ff;
+  --blue-700: #1d4ed8;
+
+  --indigo-50:  #eef2ff;
+  --indigo-700: #4338ca;
+
+  --violet-50:  #f5f3ff;
+  --violet-200: #ddd6fe;
+  --violet-700: #6d28d9;
+
+  /* ============================================================
+     Semantic status tokens — used by older module rules.
+     Rose-consolidated for destructive/rejection per Phase B.2 decision #5.
+     ============================================================ */
+  --status-emergency:     var(--rose-600);
+  --status-emergency-bg:  rgba(225, 29, 72, 0.14);
+  --status-warn:          var(--amber-700);
+  --status-warn-strong:   var(--amber-600);
+  --status-warn-bg:       rgba(217, 119, 6, 0.14);
+  --status-ok:            var(--emerald-700);
+  --status-ok-bg:         rgba(21, 128, 61, 0.12);
+  --status-info:          var(--blue-700);
+  --status-info-bg:       rgba(29, 78, 216, 0.10);
+  --status-locked:        var(--slate-600);
+  --status-locked-bg:     rgba(100, 116, 139, 0.12);
+  --status-rejected:      var(--rose-600);
+  --status-rejected-bg:   rgba(225, 29, 72, 0.10);
+
+  /* ============================================================
+     Neutrals — light theme (resolve to slate scale)
+     ============================================================ */
+  --bg:           var(--slate-50);
+  --bg-elev:      #ffffff;
+  --bg-elev-2:    var(--slate-50);
+  --bg-overlay:   rgba(15, 23, 42, 0.40);
+  --border:       var(--slate-200);
+  --border-strong: var(--slate-300);
+  --text:         var(--slate-900);
+  --text-muted:   var(--slate-600);
+  --text-faint:   var(--slate-500);
+  --text-inverse: #f9fafb;
+  --link:         var(--blue-700);
+
+  /* ============================================================
+     Sizing — radii, touch targets, spacing
+     Touch targets preserved for technician field-use.
+     ============================================================ */
+  --radius-xs:   4px;       /* dispatcher `.badge` rounded */
+  --radius:      8px;       /* dispatcher `.panel` rounded-lg */
+  --radius-sm:   6px;       /* dispatcher `.btn` / `.field-input` rounded-md */
+  --radius-lg:   8px;       /* collapsed (dispatcher has no >8px standard) */
+  --radius-full: 9999px;    /* pills, avatars, step circles */
+  --touch:       48px;
+  --touch-md:    40px;
+  --touch-sm:    32px;
+  --gap-2: 4px;
+  --gap-3: 6px;
+  --gap-4: 8px;
+  --gap-5: 12px;
+  --gap-6: 14px;
+  --gap-7: 18px;
+  --gap-8: 24px;
+
+  /* ============================================================
+     Typography — dispatcher scale
+     ============================================================ */
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fs-xxs: 10px;   /* badge */
+  --fs-xs:  11px;   /* field-label, chip, help, error */
+  --fs-sm:  12px;   /* subtitles, helpers, KPI labels */
+  --fs-md:  14px;   /* body, button, input, table body */
+  --fs-lg:  16px;   /* panel-title, large button */
+  --fs-xl:  18px;   /* top bar title */
+  --fs-xxl: 24px;   /* page H1 / dashboard H2 */
+
+  /* ============================================================
+     Shadows — dispatcher canonical
+     ============================================================ */
+  --shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);                                 /* shadow-sm */
+  --shadow-2: 0 10px 15px -3px rgba(0, 0, 0, 0.10),
+              0 4px 6px -4px rgba(0, 0, 0, 0.10);                              /* shadow-lg */
+  --shadow-3: 0 25px 50px -12px rgba(0, 0, 0, 0.25);                           /* shadow-2xl (modal) */
+
+  /* ============================================================
+     Focus ring — input/textarea
+     ============================================================ */
+  --focus-ring: 0 0 0 2px rgba(200, 16, 46, 0.20);
+}
+
+[data-theme="dark"] {
+  --bg:           #0a0c10;
+  --bg-elev:      #14171d;
+  --bg-elev-2:    #1b1f27;
+  --bg-overlay:   rgba(0, 0, 0, 0.65);
+  --border:       #262b34;
+  --border-strong: #3a414e;
+  --text:         #f1f5f9;
+  --text-muted:   #b6c0cc;
+  --text-faint:   #94a3b8;
+  --text-inverse: #0f172a;
+  --link:         #60a5fa;
+
+  --mts-red-soft:        rgba(225, 29, 45, 0.16);
+  --mts-red-soft-strong: rgba(225, 29, 45, 0.26);
+  --status-emergency-bg: rgba(225, 29, 72, 0.22);
+  --status-warn-bg:      rgba(217, 119, 6, 0.20);
+  --status-ok-bg:        rgba(21, 128, 61, 0.20);
+  --status-info-bg:      rgba(96, 165, 250, 0.16);
+  --status-locked-bg:    rgba(148, 163, 184, 0.16);
+  --status-rejected-bg:  rgba(225, 29, 72, 0.20);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-2: 0 10px 24px rgba(0, 0, 0, 0.55);
+  --shadow-3: 0 25px 50px rgba(0, 0, 0, 0.70);
+}
